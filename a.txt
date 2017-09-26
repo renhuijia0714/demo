@@ -1,0 +1,49 @@
+1、安装git客户端
+
+
+2、打开Git Bash   自报家门：                                          
+
+    git config --global user.name "You Name"
+    git config --global user.email yourmail@server.com
+
+
+3、创建github ssh密钥 打开Git Bash键入
+
+    ssh-keygen -C 'yourmail@server.com' -t rsa
+
+   一路回车就行！ C:\Users\用户名\ 下生成了一个文件夹.ssh，找到下面的id_rsa.pub，复制里面的文本，后面有用
+
+
+4、登录github网站，SSH keys里添加密钥，title随便取名，，，把上一步复制的文本添加到key里面，点击add key即   可。
+
+5、进入到本地想上传项目的文件夹里，右键打开Bash键入
+
+   git init
+
+   touch README
+
+   git add README
+
+   git commit -m '注释'
+
+   git remote add origin 项目地址（例：git@github.com:abc/test.git）
+
+   git push -u origin master
+
+注：
+
+测试与github是否连接成功：SSH -v git@github.com
+
+查看当前项目远程分支路径： git remote -v
+
+
+克隆远程项目：
+
+1、创建存储项目的文件夹，右键打开Bash键入
+
+2、git clone 项目地址（例：git@github.com:abc/test.git）
+
+
+github常见错误(引用)：http://blog.csdn.net/god_wot/article/details/10522405
+
+
